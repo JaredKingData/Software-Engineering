@@ -1,0 +1,124 @@
+NOTES ON SOFTWARE DESIGN PATTERNS
+
+In software engineering, a design pattern is a reusable solution to a common problem in software design. It's not a finished code but a guide on how to solve a problem effectively. Design patterns are best practices that help programmers solve common issues when designing an application. Object-oriented design patterns illustrate relationships between classes or objects, adaptable to various situations. Some patterns may not be suitable for certain programming languages, and in some cases, built-in language features can make certain patterns unnecessary. Design patterns serve as a structured approach between programming paradigms and concrete algorithms.
+HISTORY
+Patterns as a concept in software design trace back to Christopher Alexander in 1977. In 1987, Kent Beck and Ward Cunningham applied patterns to programming, presenting their work at the OOPSLA conference. Design patterns gained traction after the publication of "Design Patterns: Elements of Reusable Object-Oriented Software" in 1994 by the "Gang of Four" (Gamma et al.). The term's scope remains debated. Notable books include those by Gamma et al., Buschmann et al., Beck, Schmidt et al., Fowler, Hohpe and Woolf, Freeman et al., and Larman. Despite practical application, formalization of design patterns lagged for several years.
+
+PRACTICE
+Design patterns speed up development by offering tested paradigms, preventing hidden issues in code and enhancing readability. However, they may introduce complexity and impact performance. Patterns must be programmed into each application, hindering some aspects of software reuse. Efforts have been made to transform patterns into components for broader applicability. Design patterns offer general solutions in a format independent of specific problems, making them valuable for diverse applications.
+
+STRUCTURE
+Design patterns consist of sections like Structure, Participants, and Collaboration, detailing a prototypical micro-architecture for solving recurrent problems. Developers adopt this micro-architecture in their designs, aligning the structure and organization with the chosen design motif. Efforts extend to codifying design patterns in specific domains, such as user interface, information visualization, secure design, web design, and business models. The Pattern Languages of Programming Conference proceedings feature numerous examples of domain-specific patterns.
+
+CLASSIFICATION AND LIST
+Design patterns fall into three categories: Creational patterns facilitate controlled object creation. Structural patterns organize classes and objects for enhanced functionality. Behavioral patterns identify and implement common communication patterns between objects.
+
+CREATIONAL PATTERNS
+1.	Abstract factory - Create related or dependent objects through an interface without specifying their exact classes.
+2.	Builder - Decouple the creation of a complex object from its structure, enabling the same process to generate different representations.
+3.	Dependency injection - A class receives necessary objects from an injector instead of creating them directly.
+4.	Factory method - Define an interface for creating an object and let subclasses decide which class to instantiate. Factory Method delegates instantiation to subclasses.
+5.	Lazy initialization - Delay creating an object or calculating a value until it's needed for the first time. Known as "virtual proxy" in the GoF catalog, it's an implementation strategy for the Proxy pattern.
+6.	Multiton - Restrict a class to named instances and offer a global access point to them.
+7.	Object pool - Recycle unused objects to avoid costly resource acquisition and release. A broader concept, akin to connection pool and thread pool patterns.
+8.	Prototype - Create new objects by specifying their kinds using a prototype instance. Utilize the 'skeleton' of an existing object for improved performance and minimal memory footprint.
+9.	Resource Acquisition is initialization (RAII) - Tie resource release to the lifespan of relevant objects to ensure proper disposal.
+10.	Singleton - Restrict a class to a single instance and offer a global access point to it.
+
+STRUCTURAL PATTERNS
+1.	Adapter, Wrapper, or Translator - Transform a class's interface into one expected by clients. Adapters enable collaboration between classes with incompatible interfaces. In enterprise integration patterns, it's akin to a translator.
+2.	Bridge - Separate an abstraction from its implementation, enabling independent variations of each.
+3.	Composite - Construct tree structures by composing objects to represent part-whole hierarchies. The Composite pattern allows clients to handle individual objects and compositions uniformly.
+4.	Decorator - Dynamically add extra tasks to an object without changing its interface. Decorators offer flexibility for enhancing functionality without using subclassing.
+5.	Delegation - Expand a class through composition, not subclassing. The object delegates request handling to a second object (the delegate).
+6.	Extension object - Adding functionality to a hierarchy without changing the hierarchy.
+7.	Façade - Create a single interface for multiple subsystem interfaces. A Facade defines a simpler, higher-level interface to ease subsystem usage.
+8.	Flyweight - Use sharing to support large numbers of similar objects efficiently.
+9.	Front controller - The pattern relates to the design of Web applications. It provides a centralized entry point for handling requests.
+10.	Marker - Empty interface to associate metadata with a class.
+11.	Module - Group several related elements, such as classes, singletons, methods, globally used, into a single conceptual entity.
+12.	Proxy - Provide a surrogate or placeholder for another object to control access to it.
+13.	Twin - Twin allows modeling of multiple inheritance in programming languages that do not support this feature.
+
+BEHAVIORAL PATTERNS
+1.	Blackboard - Combine diverse data sources using an artificial intelligence pattern, similar to a blackboard system.
+2.	Chain of responsibility - Prevent tight connections between a request sender and receiver. Let multiple objects have a chance to handle the request by forming a chain, passing it along until one handles it.
+3.	Command: Wrap a request as an object to customize clients with various requests, queue or log requests, and facilitate support for undoable operations.
+4.	Fluent interface - Create an API with method chaining for a DSL-like readability. Each method call returns a context for the next logical method call(s).
+5.	Interpreter - Define a language's grammar representation and create an interpreter to understand sentences in that language using the representation.
+6.	Iterator - Enable sequential access to elements in an aggregate object without revealing its internal structure.
+7.	Mediator - A mediator is an object that manages interactions among a set of objects, fostering loose coupling by preventing direct references between them. This enables independent variations in their interactions.
+8.	Memento - Without violating encapsulation, capture and externalize an object's internal state allowing the object to be restored to this state later.
+9.	Null object - Avoid null references by providing a default object.
+10.	Observer or Publish/Subscribe - Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.
+11.	Servant - Define shared functionality for a group of classes. The servant pattern, also known as a helper or utility class, implements this common functionality for a set of classes. Helper classes typically consist of static methods that operate on various class objects.
+12.	Specification - Recombinable business logic in a Boolean fashion. 
+13.	State - Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
+14.	Strategy - Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+15.	Template method - Outline an algorithm's structure in an operation, leaving some steps to be defined by subclasses. The template method allows subclasses to alter specific steps without modifying the overall structure of the algorithm.
+16.	Visitor - Express an operation for a group of classes. With the Visitor pattern, a new operation can be introduced without modifying the classes themselves.
+
+CONCURRENCY PATTERNS
+1.	Active object – 
+2.	Balking – 
+3.	Binding properties – 
+4.	Compute kernel – 
+5.	Double-checked locking – 
+6.	Event-based asynchronous –
+7.	Guarded suspension – 
+8.	Join – 
+9.	Lock – 
+10.	Messaging Design Pattern (MDP) – 
+11.	Monitor Object – 
+12.	Reactor – 
+13.	Read-write lock – 
+14.	Scheduler – 
+15.	Service handler pattern – 
+16.	Thread pool – 
+17.	Thread-specific storage – 
+18.	Safe Concurrency with Exclusive Ownership – 
+19.	CPU atomic operation – 
+
+DOCUMENTATION 
+Design pattern documentation typically includes:
+1.	Pattern Name and Classification: A unique name identifying the pattern.
+2.	Intent: Describes the goal and purpose of the pattern.
+3.	Also Known As: Alternative names for the pattern.
+4.	Motivation (Forces): Presents a scenario highlighting the problem and context for using the pattern.
+5.	Applicability: Specifies situations where the pattern is useful.
+6.	Structure: Graphical representation using class diagrams or interaction diagrams.
+7.	Participants: Lists classes and objects involved, defining their roles.
+8.	Collaboration: Describes how classes and objects interact within the pattern.
+9.	Consequences: Discusses results, side effects, and trade-offs of using the pattern.
+10.	Implementation: Details on how to implement the pattern.
+11.	Sample Code: Illustrates usage of the pattern in a programming language.
+12.	Known Uses: Provides examples of real-world applications.
+13.	Related Patterns: Discusses relationships and differences with other patterns.
+Note: Various authors may use different formats, but common starting points exist, such as the format used by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides in their book Design Patterns.
+
+CRITICISM
+Design patterns can signal missing features in a programming language. For example, Peter Norvig demonstrates that many patterns in the Design Patterns book are simplified or eliminated in languages like Lisp or Dylan with direct language support. Similarly, Hannemann and Kiczales show that using an aspect-oriented programming language like AspectJ can simplify implementations of design patterns by removing code-level dependencies. Paul Graham's essay "Revenge of the Nerds" is also relevant. However, it's crucial to note that inappropriate use of patterns can lead to unnecessary complexity.
+
+SEE ALSO
+•	Abstraction principle
+•	Algorithmic skeleton
+•	Anti-pattern
+•	Architectural pattern
+•	Canonical protocol pattern
+•	Debugging patterns
+•	Design pattern
+•	Distributed design patterns
+•	Double-chance function
+•	Enterprise Architecture framework
+•	GRASP (object-oriented design)
+•	Helper class
+•	Idiom in programming
+•	Interaction design pattern
+•	List of software development philosophies
+•	List of software engineering topics
+•	Pattern language
+•	Pattern theory
+•	Pedagogical patterns
+•	Portland Pattern Repository
+•	Refactoring
+•	Software development methodology
